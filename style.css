@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
     /* transition: all 2s linear; */
 }
 
@@ -36,7 +37,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.7rem 1rem;
+    padding: 1.7rem 2rem;
     box-shadow: 0 5px 10px 0 rgba(0 0 0/ .1);
     position: fixed;
     inset: 0 0 auto 0;
@@ -140,7 +141,7 @@ section.home {
 }
 
 .home h1  {
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     font-weight: 700;
     color: #333;
 }
@@ -190,16 +191,16 @@ section.home {
 /* -----SPECIALITY------- */
 section.speciality {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 2rem 2rem;
-    gap: 1.2rem;
+    gap: 1.5rem;
 
 }
 
 .speciality h1 {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.3rem;
     color: var(--grey);
     align-self: flex-end;
     height: max-content;
@@ -213,21 +214,22 @@ section.speciality {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 7px;
     text-align: center;
     padding: 2.5rem 2rem;
     height: 250px;
-    border: 1px solid rgba(0 0 0/ .3);
+    border: 1px solid rgba(0 0 0/ .5);
+    box-shadow: 2px 2px 10px 3px rgba(0 0 0/ .1);3
     
 }
 
 .speciality .card h3 {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     color: #333;
 }
 
 .speciality .card p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: var(--grey);
 }
 
@@ -270,11 +272,10 @@ section.speciality {
 }
 
 
-
 /* -----POPULAR------- */
 section.popular {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 2rem 2rem;
     gap: 1.2rem;
 }
@@ -293,7 +294,8 @@ section.popular {
         text-align: center;
         padding: 2.5rem 2rem;
         /* height: 250px; */
-        border: 1px solid rgba(0 0 0/ .3);
+        border: 1.5px solid rgba(0 0 0/ .3);
+        box-shadow: 2px 2px 10px 3px rgba(0 0 0/ .1);
 }
 
 .popular .popular-card img {
@@ -302,13 +304,13 @@ section.popular {
     background-repeat: no-repeat;
     width: 100%;
     border-radius: 5px;
-    /* height: 50%; */
+    height: 100%;
 }
 
 .popular h1 {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.3rem;
     color: var(--grey);
     align-self: flex-end;
     height: max-content;
@@ -358,13 +360,213 @@ section.popular {
     color: white;
 }
 
+.popular .fa-star {
+    color: gold;
+}
+
+.popular .popular-card--image {
+    position: relative;
+}
+
+.popular .popular-card--image::before {
+    content: "$5 - $20";
+    background-color: var(--red);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* ---------INFO-------- */
+
+section.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    gap: 1.2rem;
+}
+
+.info .info-card {
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    padding-inline: 1.3rem;
+}
+
+.info .info-card > div {
+    background-color: red;
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1rem solid #fff;
+    box-shadow: 2px 2px 10px 3px rgba(0 0 0/ .1);
+
+}
+
+.info .info-card>div img {
+    width: 100%;
+}
+
+.info h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 3.3rem;
+    color: var(--grey);
+    align-self: flex-end;
+    height: max-content;
+}
+
+.info h1>span {
+    color: var(--red);
+}
+
+.info .info-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+
+
+/* -----GALLERY------- */
+section.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem 2rem;
+    gap: 1.5rem;
+
+}
+
+.gallery h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 3.3rem;
+    color: var(--grey);
+    align-self: flex-end;
+    height: max-content;
+}
+
+.gallery h1>span {
+    color: var(--red);
+}
+
+.gallery .card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 7px;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    height: 250px;
+    border: 10px solid #fff;
+    box-shadow: 2px 2px 10px 3px rgba(0 0 0/ .1);
+
+}
+
+.gallery .card h3 {
+    font-size: 2.3rem;
+    color: #333;
+}
+
+.gallery .card p {
+    font-size: 1.4rem;
+    color: var(--grey);
+    /* background-color: red; */
+}
+
+.gallery .card img {
+    position: absolute;
+    inset: 0;
+    /* z-index: 1; */
+    width: 100%;
+    height: 100%;
+    /* pointer-events: none; */
+}
+
+
+.gallery .card-1 {
+    position: absolute;
+    inset: 0;
+    /* z-index: 1; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: transform .2s linear;
+    padding: 2rem 2rem;
+    padding-top: 4rem;
+    background-color: rgba(225 225 225/.9);
+}
+
+.gallery .card:hover .card-1 {
+    transform: translateY(0);
+}
+
+.gallery .card-1 p {
+    margin: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.gallery .card-1 a {
+    border: 1.7px solid var(--red);
+    outline: none;
+    background-color: inherit;
+    color: var(--red);
+    padding: .8rem 3rem;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: all .4s linear;
+}
+
+.gallery .card-1 a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--red);
+    transition: all .4s linear;
+    z-index: -1;
+}
+
+.gallery .card-1 a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.gallery .card-1 a:hover {
+    color: white;
+}
 
 
 
 
 
 
-@media (min-width:900px) {
+
+@media (min-width:800px) {
     header {
         height: 100vh;
     }
@@ -446,6 +648,23 @@ section.popular {
     section.speciality {
         padding: 2rem 11rem;
         min-height: 100vh;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .speciality .card {
+        height: 260px;
+    }
+
+    .speciality h1 {
+        font-size: 4rem;
+    }
+
+    .speciality .card h3 {
+        font-size: 2.6rem;
+    }
+
+    .speciality .card p {
+        font-size: 1.7rem;
     }
 
 
@@ -454,6 +673,7 @@ section.popular {
     section.popular {
         padding: 2rem 11rem;
         min-height: 100vh;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     }
 
     .popular a {
@@ -462,4 +682,64 @@ section.popular {
         border-radius: 3px;
         font-size: 1.7rem;
     }
+
+    .speciality h1 {
+        font-size: 4rem;
+    }
+
+    /* --------INFO--------- */
+
+    section.info {
+        padding: 2rem 6rem;
+    }
+
+    section.info h1 {
+        font-size: 4rem;
+    }
+
+    .info .info-card h2 {
+        font-size: 3.5rem;
+    }
+
+    /* -------GALLERY------- */
+
+    section.gallery {
+        padding: 2rem 11rem;
+        min-height: 100vh;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .gallery .card {
+        height: 260px;
+    }
+
+    .gallery h1 {
+        font-size: 4rem;
+    }
+
+    .gallery .card h3 {
+        font-size: 2.6rem;
+    }
+
+    .gallery .card p {
+        font-size: 1.7rem;
+    }
 }
+
+
+
+
+
+
+
+@media(max-width:950px) {
+    .nav-bar,
+    section.home,
+    section.speciality,
+    section.popular,
+    section.info,
+    section.gallery {
+        padding-inline: 2rem;
+    }
+}
+
