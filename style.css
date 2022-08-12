@@ -606,7 +606,7 @@ section.review {
 
 .review .review-image {
     width: 120px;
-    aspect-ratio: 1;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     border: 10px solid #fff;
