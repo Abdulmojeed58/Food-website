@@ -54,7 +54,7 @@ body {
     top: -30%;
     z-index: 50;
     margin-right: 2rem;
-    transition: all 5s linear;
+    transition: all .7s linear;
 }
 
 
@@ -88,12 +88,14 @@ header {
 .nav-bar nav {
     position: absolute;
     inset: 100% 0 auto 0;
-    /* transition: all 5s linear; */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all .2s linear;
     
 }
 
 .nav-bar nav.active {
-    clip-path: polygon(50% 0%, 0 0, 100% 0);
+    /* clip-path: polygon(50% 0%, 0 0, 100% 0); */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     
 }
 
@@ -833,8 +835,8 @@ footer h2 span {
 
 @media (min-width:800px) {
     .top {
-        font-size: 4rem;
-        padding: .5rem 2rem;
+        font-size: 3rem;
+        padding: .5rem 1.5rem;
     }
 
     header {
